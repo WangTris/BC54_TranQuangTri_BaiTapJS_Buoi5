@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- BOOTSTRAP 4 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>JS_5</title>
+  </head>
+  <body>
+    <h1>BAI TAP JS BUOI 5</h1>
+    <hr />
+    <!-- Bai 1 -->
+    <h2>Bai 1: Quan ly tuyen sinh</h2>
+    <div class="form-group">
+      <label for="">Nhap thong tin sau</label>
+      <input
+        type="text"
+        class="form-control"
+        id="b1_diemChuan"
+        placeholder="Diem Chuan"
+      />
+      <input
+        type="text"
+        class="form-control"
+        id="b1_diemMon1"
+        placeholder="Diem Mon 1"
+      />
+      <input
+        type="text"
+        class="form-control"
+        id="b1_diemMon2"
+        placeholder="Diem Mon 2"
+      />
+      <input
+        type="text"
+        class="form-control"
+        id="b1_diemMon3"
+        placeholder="Diem Mon 3"
+      />
+    </div>
+    <div class="form-group">
+      <label for="">Khu vuc</label>
+      <select class="custom-select" name="" id="b1_khuVuc">
+        <option value="100">Chon khu vuc</option>
+        <option value="2">A</option>
+        <option value="1">B</option>
+        <option value="0.5">C</option>
+        <option value="0">X</option>
+      </select>
+      <small>Chon X neu khong thuoc khu vuc uu tien</small>
+    </div>
+    <div class="form-group">
+      <label for="">Doi tuong</label>
+      <select class="custom-select" name="" id="b1_doiTuong">
+        <option value="100">Chon doi tuong</option>
+        <option value="0">0</option>
+        <option value="2.5">1</option>
+        <option value="1.5">2</option>
+        <option value="1">3</option>
+      </select>
+      <small>Chon 0 neu khong thuoc doi tuong</small>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="b1_tinhDiem()">
+      Tinh Diem
+    </button>
+    <div class="alert alert-success mt-3" role="alert" id="b1_ketQua"></div>
+    <hr />
+
+    <!-- Bai 2 -->
+    <h2>Bai 2:</h2>
+    <div class="form-group">
+      <label for="">Nhap ten va so KW</label>
+      <input type="text" class="form-control" id="b2_ten" placeholder="Ten" />
+      <input type="text" class="form-control" id="b2_kw" placeholder="KW" />
+    </div>
+    <button type="button" class="btn btn-primary" onclick="b2_tinhTienDien()">
+      Tinh Tien Dien
+    </button>
+    <div class="alert alert-success mt-3" role="alert" id="b2_ketQua"></div>
+    <hr />
+
+    <!-- Bai 3 -->
+    <h2>Bai 3:</h2>
+    <div class="form-group">
+      <label for="">Tinh Thu Nhap Chiu Thue</label>
+      <input type="text" class="form-control" id="b3_ten" placeholder="Ten" />
+      <input
+        type="text"
+        class="form-control"
+        id="b3_tongThuNhap"
+        placeholder="Tong thu nhap (min 5600000)"
+      />
+      <small>Thu Nhap tren 5tr6 hay tinh Thue</small>
+      <small>|| Cong thuc bao the tui hong bik</small>
+      <input
+        type="text"
+        class="form-control"
+        id="b3_soNguoiPhuThuoc"
+        placeholder="So Nguoi Phu Thuoc"
+      />
+      <small>Khong dien mac dinh la 0</small>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="b3_thuNhap()">
+      Thu Nhap sau thue
+    </button>
+    <div class="alert alert-success mt-3" role="alert" id="b3_ketQua"></div>
+    <hr />
+
+    <!-- Bai 4 -->
+    <h2>Bai 4:</h2>
+    <div class="form-group" id="bai4">
+      <label for="">Tinh tien cap</label>
+      <select
+        onchange="chonKhachHang()"
+        class="custom-select"
+        name=""
+        id="b4_khachHang"
+      >
+        <option value="0">Chon doi tuong KH</option>
+        <option value="1">Nha Dan</option>
+        <option value="2">Doanh Nghiep</option>
+      </select>
+      <hr />
+      <input
+        type="text"
+        class="form-control"
+        id="b4_maKH"
+        placeholder="Nhap Ma KH"
+      />
+      <hr />
+      <input
+        type="text"
+        class="form-control"
+        id="b4_soKenh"
+        placeholder="So kenh cao cap"
+      />
+      <hr />
+      <input
+        type="text"
+        class="form-control"
+        id="b4_soKetNoi"
+        placeholder="So ket noi"
+        style="display: none"
+      />
+      <small>KH = Khach Hang</small>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="b4_tinhTienCap()">
+      Tinh tien cap
+    </button>
+    <div class="alert alert-success mt-3" role="alert" id="b4_ketQua"></div>
+
+    <!-- ------------- -->
+    <!-- JS BOOTSTRAP -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
