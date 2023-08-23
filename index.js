@@ -18,7 +18,7 @@ function b1_tinhDiem() {
       b1_diemMon3 == null ||
       b1_diemMon3 == ""
     ) {
-      alert("Khong Nhap Diem Sao Tui Check");
+      alert("Vui long nhap diem");
       return;
     } else if (
       b1_diemChuan < 0 ||
@@ -59,7 +59,7 @@ function b1_tinhDiem() {
   
     // Check Name inputs
     if (b2_ten == null || b2_ten == "") {
-      b2_ten = "Thang nay khong co ten";
+      b2_ten = "No name";
     }
   
     if (kw <= 50) {
@@ -89,15 +89,15 @@ function b1_tinhDiem() {
   
     // Check Name inputs
     if (b3_ten == null || b3_ten == "") {
-      b3_ten = "Thang nay khong co ten";
+      b3_ten = "No name";
     }
   
     // Check tongThuNhap >= 0
     if (b3_tongThuNhap < 0) {
-      alert("No. Nan` khong can tinh thue ^_^");
+      alert("Khong co thue");
       return;
     } else if (b3_tongThuNhap < 5600000) {
-      alert("Doc Luu Y: Tong thu nhap phai >= 5600000");
+      alert("Tong thu nhap phai >= 5.600.000");
       return;
     }
   
@@ -105,7 +105,7 @@ function b1_tinhDiem() {
     if (b3_soNguoiPhuThuoc == null || b3_soNguoiPhuThuoc == "") {
       b3_soNguoiPhuThuoc = 0;
     } else if (b3_soNguoiPhuThuoc < 0) {
-      alert("Co don thi ghi 0");
+      alert("Vui long nhap lai");
       return;
     }
   
